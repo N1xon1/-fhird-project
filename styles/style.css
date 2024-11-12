@@ -1,8 +1,18 @@
 @import url(../rotation.css);
 
 *{ 
-  border: 2px solid rgb(240, 13, 13); 
+  /* border: 2px solid rgb(240, 13, 13);  */
 } 
+
+.link-opacity{
+  transition: opacity 0.5s ease;
+}
+
+.link-opacity:hover{
+  opacity: .7;
+
+}
+
 .page {
   min-width: 1100px;
   max-width: 1600px;
@@ -21,12 +31,12 @@
 
   /* выше установили ограничения для секции */
 }
-.header_main__title{
+.header-main__title{
   display: flex;
   align-items: center;
   width: 730px;
   margin-left: 64px;
-  margin-top: 96px;
+  margin-top: 250px;
   font-size: 102px;
   font-weight: 600;
 
@@ -41,7 +51,7 @@
   transition:transform 20s ;
 }
 
-.header_main{
+.header-main{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -54,7 +64,7 @@
     position: absolute;
   }
  
-.header_main__subtitle{
+.header-main__subtitle{
     font-size: 18px;
     height: 25px;
     width: 400px;
@@ -88,7 +98,7 @@
 
   }
 
-  .descr_visual{
+  .description-visual{
     display: flex;
     margin: auto;
     /* border: 2px solid red; */
@@ -253,20 +263,20 @@
     display: flex;
   }
 
-  .section-title_visual{
+  .section-title__visual{
     font-size: 60px;
     font-weight: 600;
     line-height: 1.15;
     margin: auto;
   }
   
-  .section__subtitle{
+  .section-subtitle{
     width: 60%;
     margin: 20px auto 0 auto;
     display: flex;
   }
 
-  .section__subtitle_visual{
+  .section-subtitle__visual{
     font-size: 30px;
     line-height: 34px;
     font-weight: 400;
@@ -310,7 +320,7 @@
   .text_first{
     margin-top: 20px;
   }
-  .text_decarotion{
+  .text__decarotion{
     margin-top: 0px;
   }
 
@@ -323,9 +333,9 @@
  
 .feynman{
   /* border: 3px solid blue; */
-  min-height: 920px;
+  min-height: 900px;
   max-height: 1056px;
-  padding-top: 100px;
+  padding-top: 30px;
   background-image:url(../images/feynman.png);
   background-repeat: no-repeat;
   background-position:left 0px bottom 1px;
@@ -334,20 +344,26 @@
 }
 
 .feynman-title{
+  /* border: 3px solid blue; */
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin: 70px auto 15px auto;
   width: 648px;
 }
 
-.feynman-title_decor{
+.feynman-title__margins{
+  margin: 0;
+}
+
+.feynman-title__decor{
+  
   margin: auto;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
 }
 
-.feynman-title_decor_one{
+.feynman-title__decor_one{
   display: flex;
   justify-content: center;
 }
@@ -372,7 +388,7 @@
 }
 
 .khan{
-  padding:100px 0 0 0;
+  padding:105px 0 0 0;
   background-color: #f2f2f2;
 }
 
@@ -435,13 +451,17 @@
 
 
 .kaufman{
+  overflow: hidden;
+  position: relative;
   min-height: 800px;
   max-height: 1100px;
-  padding-top: 100px;
+
   background-color: #1f1f1f;
-  background-image: url(../images/kaufman-triangle.svg);
-  background-repeat: no-repeat;
-  background-position:top 1px  left 900px; 
+}
+
+.kaufman-img{
+  position: absolute;
+  margin-left: 900px;
 }
 
 .color_text{
@@ -453,7 +473,7 @@
   display: flex;
 }
 
-.kaufman-title-decor{
+.kaufman-title__decor{
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
@@ -482,7 +502,7 @@
   margin: 0 auto 90px auto;
   padding-top: 80px;
   width: 1100px;
-
+  position: relative;
 }
 .cell-kaufman{
   display: flex;
@@ -513,9 +533,6 @@
 .text_first{
   margin-top: 20px;
 }
-.text_decarotion{
-  margin-top: 0px;
-}
 
 .resources{
   margin-top:100px;
@@ -534,19 +551,20 @@
 }
 
 .resources-logo-link{
-  display:block;
+  position: absolute;
   width: 100%;
   height: 100%;
-  margin: 0 0 0 0;
+  padding-right: 40px;
 }
 
 .resources-logo{
   width: 270px;
   height: 38px;
+  position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
 
 .footer{
